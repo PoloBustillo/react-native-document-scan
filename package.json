@@ -1,7 +1,7 @@
 {
   "name": "react-native-document-scan",
   "title": "React Native Document Scan",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A React Native plugin that lets you scan documents using Android and iOS",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -28,8 +28,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-document-scan.git",
-    "baseUrl": "https://github.com/github_account/react-native-document-scan"
+    "url": "https://github.com/PoloBustillo/react-native-document-scan.git",
+    "baseUrl": "https://github.com/PoloBustillo/react-native-document-scan"
   },
   "keywords": [
     "react-native"

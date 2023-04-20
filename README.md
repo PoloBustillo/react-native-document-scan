@@ -1,6 +1,6 @@
 # React Native Document Scanner
 
-[![Npm package version](https://img.shields.io/npm/v/react-native-document-scanner-plugin/latest.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/react-native-document-scanner-plugin) [![npm dev dependency version](https://img.shields.io/npm/dependency-version/react-native-document-scanner-plugin/dev/react-native?color=61DAFB&logo=react&style=for-the-badge)](https://github.com/WebsiteBeaver/react-native-document-scanner-plugin/blob/master/package.json)
+[![Npm package version](https://img.shields.io/npm/v/react-native-document-scanner-plugin/latest.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/react-native-document-scanner-plugin) [![npm dev dependency version](https://img.shields.io/npm/dependency-version/react-native-document-scanner-plugin/dev/react-native?color=61DAFB&logo=react&style=for-the-badge)](https://github.com/PoloBustillo/react-native-document-scan/blob/main/package.json)
 
 This is a React Native plugin that lets you scan documents using Android. You can use it to create
 apps that let users scan notes, homework, business cards, receipts, or anything with a rectangular shape.
@@ -16,19 +16,6 @@ npm install react-native-document-scanner-plugin
 ```
 
 After installing the plugin, you need to follow the steps below
-
-### iOS
-
-1. Open `ios/Podfile` and set `platform :ios` to `13` or higher
-
-2. iOS requires the following usage description be added and filled out for your app in `Info.plist`:
-
-- `NSCameraUsageDescription` (`Privacy - Camera Usage Description`)
-
-3. Install pods by running
-```bash
-cd ios && pod install && cd ..
-```
 
 ### Android
 
@@ -101,6 +88,8 @@ Here's what this example looks like with several items
 <video src="https://user-images.githubusercontent.com/26162804/161643203-2a265cc1-5cf1-4474-b43c-7b1b2dcba704.mp4" data-canonical-src="https://user-images.githubusercontent.com/26162804/161643203-2a265cc1-5cf1-4474-b43c-7b1b2dcba704.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px;"></video>
 
 ### Limit Number of Scans
+
+1.34-alpha add a minNumDocuments attribute, to do not show done button if min is not reached.
 
 You can limit the number of scans. For example if your app lets a user scan a business
 card you might want them to only capture the front and back. In this case you can set

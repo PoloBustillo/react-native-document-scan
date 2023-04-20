@@ -44,7 +44,7 @@ public class DocumentScanModule extends ReactContextBaseJavaModule {
         }
     };
 
-    public DocumentScannerModule(ReactApplicationContext reactContext) {
+    public DocumentScanModule(ReactApplicationContext reactContext) {
         super(reactContext);
         reactContext.addActivityEventListener(activityEventListener);
     }

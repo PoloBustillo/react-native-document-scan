@@ -88,12 +88,13 @@ Here's what this example looks like with several items
 <video src="https://user-images.githubusercontent.com/26162804/161643203-2a265cc1-5cf1-4474-b43c-7b1b2dcba704.mp4" data-canonical-src="https://user-images.githubusercontent.com/26162804/161643203-2a265cc1-5cf1-4474-b43c-7b1b2dcba704.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px;"></video>
 
 ### Limit Number of Scans
+This only works on Android.
 
 1.34-alpha add a minNumDocuments attribute, to do not show done button if min is not reached.
 
 You can limit the number of scans. For example if your app lets a user scan a business
 card you might want them to only capture the front and back. In this case you can set
-maxNumDocuments to 2. This only works on Android.
+maxNumDocuments to 2. 
 
 ```javascript
 import React, { useState, useEffect } from 'react'
@@ -213,13 +214,13 @@ Opens the camera, and starts the document scan
 
 #### ScanDocumentOptions
 
-| Prop                    | Type                                                  | Description                                                                                                                                                                                                                                                                                                                               | Default                                   |
-| ----------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| **`croppedImageQuality`**   | <code>number</code>                                   | The quality of the cropped image from 0 - 100. 100 is the best quality.                                                                                                                                                                                                                                                | <code>: 100</code>                         |
-| **`letUserAdjustCrop`** | <code>boolean</code>                                  | Android only: If true then once the user takes a photo, they get to preview the automatically detected document corners. They can then move the corners in case there needs to be an adjustment. If false then the user can't adjust the corners, and the user can only take 1 photo (maxNumDocuments can't be more than 1 in this case). | <code>: true</code>                       |
-| **`maxNumDocuments`**   | <code>number</code>                                   | Android only: The maximum number of photos an user can take (not counting photo retakes)                                                                                                                                                                                                                                                  | <code>: 24</code>                         |
-| **`responseType`**      | <code><a href="#responsetype">ResponseType</a></code> | The response comes back in this format on success. It can be the document scan image file paths or base64 images.                                                                                                                                                                                                                         | <code>: ResponseType.ImageFilePath</code> |
-
+| Prop                      | Type                                                  | Description                                                                                                                                                                                                                                                                                                                               | Default                                   |
+|---------------------------| ----------------------------------------------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------------------- |
+| **`croppedImageQuality`** | <code>number</code>                                   | The quality of the cropped image from 0 - 100. 100 is the best quality.                                                                                                                                                                                                                                                                   | <code>: 100</code>                         |
+| **`letUserAdjustCrop`**   | <code>boolean</code>                                  | Android only: If true then once the user takes a photo, they get to preview the automatically detected document corners. They can then move the corners in case there needs to be an adjustment. If false then the user can't adjust the corners, and the user can only take 1 photo (maxNumDocuments can't be more than 1 in this case). | <code>: true</code>                       |
+| **`maxNumDocuments`**     | <code>number</code>                                   | Android only: The maximum number of photos an user can take (not counting photo retakes)                                                                                                                                                                                                                                                  | <code>: 24</code>                         |
+| **`minNumDocuments`**     | <code>number</code>                                   | Android only: The minimum number of photos an user can take (not counting photo retakes)                                                                                                                                                                                                                                                  | <code>: 24</code>                         |
+| **`responseType`**        | <code><a href="#responsetype">ResponseType</a></code> | The response comes back in this format on success. It can be the document scan image file paths or base64 images.                                                                                                                                                                                                                         | <code>: ResponseType.ImageFilePath</code> |
 
 ### Enums
 

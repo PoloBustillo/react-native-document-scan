@@ -22,7 +22,7 @@ import io.polobustillo.documentscanner.DocumentScanner;
 import io.polobustillo.documentscanner.constants.DocumentScannerExtra;
 import java.util.ArrayList;
 
-@ReactModule(name = DocumentScannerModule.NAME)
+@ReactModule(name = DocumentScanModule.NAME)
 public class DocumentScanModule extends ReactContextBaseJavaModule {
     public static final String NAME = "DocumentScan";
     private static final int DOCUMENT_SCAN_REQUEST = 938;
@@ -95,6 +95,9 @@ public class DocumentScanModule extends ReactContextBaseJavaModule {
                         : null,
                 options.hasKey(DocumentScannerExtra.EXTRA_MAX_NUM_DOCUMENTS)
                         ? options.getInt(DocumentScannerExtra.EXTRA_MAX_NUM_DOCUMENTS)
+                        : null,
+                options.hasKey(DocumentScannerExtra.EXTRA_MIN_NUM_DOCUMENTS)
+                        ? options.getInt(DocumentScannerExtra.EXTRA_MIN_NUM_DOCUMENTS)
                         : null,
                 options.hasKey(DocumentScannerExtra.EXTRA_CROPPED_IMAGE_QUALITY)
                         ? options.getInt(DocumentScannerExtra.EXTRA_CROPPED_IMAGE_QUALITY)
